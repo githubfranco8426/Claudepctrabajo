@@ -12,7 +12,14 @@ edita una imagen existente conservando lo que no le pides cambiar.
 
 ## Antes de generar: esto cuesta plata
 
-Cada generación consume créditos de la cuenta de Franco. Dos reglas que evitan cobros dobles:
+**Regla de Franco, fijada el 2026-08-29: nunca ejecutes una generación sin su sí explícito.**
+Por barata que sea, por obvio que parezca el encargo, aunque él acabe de pedir la imagen.
+Presupuesta (gratis), dile el monto, y **espera su respuesta en un turno aparte** — anunciar
+el precio y generar en el mismo mensaje no es pedir permiso. La regla nace de un caso real:
+se le cobraron USD 0,24 por dos imágenes que además salieron con el formato equivocado, y él
+no había alcanzado a aprobar el gasto.
+
+Además, dos reglas que evitan cobros dobles:
 
 - **Nunca repitas una llamada para "reintentar"** — una segunda llamada es una segunda
   generación cobrada, no un reintento. Si algo falla, revisa el estado del job antes de
@@ -21,8 +28,9 @@ Cada generación consume créditos de la cuenta de Franco. Dos reglas que evitan
   `get_cost: true` en Higgsfield, `estimate_only: true` en ElevenLabs. Ninguno de los dos
   genera nada, solo devuelven el costo.
 
-Si el encargo es ambiguo (¿qué formato? ¿con texto o sin texto?), pregunta antes de gastar.
-Una pregunta cuesta cero; una tanda de 4 imágenes equivocadas no.
+Si el encargo es ambiguo (¿qué formato? ¿con texto o sin texto?), resuélvelo **antes** de
+presupuestar. Una pregunta cuesta cero; una tanda de imágenes equivocadas no, y no hay
+reembolso por una generación mal encuadrada.
 
 ## Qué conector usar
 
