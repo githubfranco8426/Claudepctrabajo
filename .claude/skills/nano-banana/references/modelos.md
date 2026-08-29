@@ -87,7 +87,22 @@ Parámetros al nivel raíz, no dentro de `params`:
 - Sin `flow_id` se crea un flow nuevo. Si la imagen va a alimentar otra generación (video,
   lipsync), llama antes a `creative_create_flow` y reusa ese `flow_id` en todas: nodos de
   flows distintos no se pueden conectar.
-- No hay control de `aspect_ratio` por parámetro. Para forzar una proporción, adjunta una
-  imagen de referencia con las dimensiones correctas.
+- **El aspect ratio no se controla desde `creative_generate_image`** — esa herramienta no
+  expone el parámetro, y el nodo arranca en **16:9 a 1K** por defecto. Pedir "formato
+  cuadrado 1:1" dentro del prompt **no sirve**: verificado en vivo, devuelve 1376×768 y cobra
+  igual. El modelo sí acepta el parámetro; solo hay que llegarle por el nodo:
+
+  ```
+  creative_get_model_schema(node_type="image-generation", model_id="gemini-3-pro-image")
+  creative_update_node(flow_id, node_id, model_parameters={"aspect_ratio": "1:1",
+                                                           "resolution": "2K"}, prompt=...)
+  creative_run_flow_nodes(flow_id, node_ids=[node_id], generations_count=N)
+  ```
+
+  `aspect_ratio` acepta `auto`, `1:1`, `2:3`, `3:2`, `3:4`, `4:3`, `4:5`, `5:4`, `9:16`,
+  `16:9`, `21:9`; `resolution` acepta `1K`, `2K`, `4K`. Consulta siempre el schema antes:
+  los nombres varían entre modelos y un nombre inventado falla la validación.
+- Por eso, para una pieza con formato exigido, **Higgsfield es la ruta de menor fricción**:
+  ahí `aspect_ratio` y `resolution` van en la misma llamada que genera.
 - `creative_get_flow_node_types` lista lo que este workspace puede ejecutar realmente;
   `creative_get_model_guide` trae la guía de prompting de un modelo concreto.

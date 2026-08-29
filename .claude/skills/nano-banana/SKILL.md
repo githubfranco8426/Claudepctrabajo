@@ -33,8 +33,12 @@ que tiene que salir 1080×1080 exacto, el parámetro gana al prompt.
 
 **ElevenLabs (`mcp__ElevenLabs__creative_generate_image` / `creative_edit_image`)** cuando
 convenga el canvas editable: devuelve una `url` de flow que Franco puede abrir y seguir
-iterando a mano, y encadena bien con video o voz. Ahí el aspect ratio se controla dando una
-imagen de referencia con las dimensiones correctas.
+iterando a mano, y encadena bien con video o voz.
+
+Ojo con una trampa cara en ElevenLabs: `creative_generate_image` **no expone `aspect_ratio`**,
+y el nodo tiene por defecto **16:9 a 1K**. Pedir el formato solo por texto no funciona — sale
+16:9 igual, y se cobra. Para una pieza cuadrada hay que fijar el parámetro en el nodo
+(`creative_update_node` → `creative_run_flow_nodes`); está explicado en `references/modelos.md`.
 
 Los IDs de modelo, parámetros y proporciones de cada conector están en
 `references/modelos.md`. Léelo antes de la primera llamada de la sesión — los IDs difieren

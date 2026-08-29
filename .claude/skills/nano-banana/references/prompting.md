@@ -46,7 +46,11 @@ Ejemplo:
 Lo más importante para las piezas de ALTHIA. Cuanto más pesa la tipografía en el encargo, más
 explícito tiene que ser el prompt. No describas las palabras: describe cómo deben verse.
 
-- Cita el texto exacto entre comillas.
+- Cita el texto exacto, pero **no lo envuelvas en comillas angulares `«»`**: el modelo las
+  dibuja dentro de la pieza como si fueran parte del título (verificado en vivo, dos de dos
+  generaciones salieron con `«Kinesiología respiratoria infantil»` impreso). Es más seguro
+  poner cada cadena sola en su propia línea, después de dos puntos, y agregar una regla
+  explícita: *"no dibujes comillas de ningún tipo alrededor de ningún texto"*.
 - Especifica la jerarquía línea por línea.
 - Nombra la fuente o el estilo tipográfico cuando importe.
 - Especifica color, tamaño relativo, peso y estilo (bold, itálica, condensada, MAYÚSCULAS).
