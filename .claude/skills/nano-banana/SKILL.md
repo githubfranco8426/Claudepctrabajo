@@ -1,6 +1,6 @@
 ---
 name: nano-banana
-description: Genera y edita imágenes con los modelos Nano Banana (Gemini Image de Google) a través de los MCP de Higgsfield o ElevenLabs. Úsala siempre que Franco pida crear, generar, editar, retocar, ampliar o rehacer una imagen — piezas gráficas de Instagram para ALTHIA MED SPA, fotos de portada, fondos, mockups, banners, ilustraciones, flyers — y también cuando diga "nano banana", "nano-banana", "genera una imagen", "hazme una foto", "necesito una pieza para el post", "cámbiale X a esta imagen" o mencione un formato como 1080x1080, 4:5 o story. Aplícala aunque no nombre el modelo: es el camino por defecto para cualquier imagen en este repo.
+description: Genera y edita imágenes con los modelos Nano Banana (Gemini Image de Google) a través de los MCP de Higgsfield o ElevenLabs. Úsala siempre que Franco pida crear, generar, editar, retocar, ampliar o rehacer una imagen — piezas gráficas de Instagram para ALTHIA MED SPA, fotos de portada, fondos, mockups, banners, ilustraciones, flyers — y también cuando diga "nano banana", "nano-banana", "genera una imagen", "hazme una foto", "necesito una pieza para el post", "cámbiale X a esta imagen" o mencione un formato como 1080x1080, 4:5 o story. Aplícala aunque no nombre el modelo: es el camino por defecto para cualquier pedido de imagen.
 ---
 
 # Nano Banana
@@ -107,7 +107,7 @@ adjuntos, se sube por las rutas de arriba.
 
 ## Formatos de ALTHIA MED SPA
 
-Las publicaciones viven en `publicaciones/*.md`, con el texto exacto de la pieza en una tabla
+Las publicaciones viven en el repo Claudepctrabajo, en `publicaciones/*.md`, con el texto exacto de la pieza en una tabla
 y el caption debajo. Cuando el encargo sea "la imagen de este post", lee ese archivo y saca de
 ahí el texto — no lo reescribas ni lo parafrasees, es copy aprobado.
 
