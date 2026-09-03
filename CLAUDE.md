@@ -8,12 +8,17 @@ Centro Rehabilita.me. Guardado aquí para poder retomarlo desde el PC principal.
 - **Proyecto Stitch:** Optimización de Usabilidad Intuitiva
 - **ID del proyecto:** `15532165111202827577`
 - **App en producción:** https://app-centro-rehabilitame.vercel.app/
+- **Repo real de la app (encontrado vía Vercel):** `githubfranco8426/App-Centro-Rehabilitame`
+  (público, Next.js + Supabase). Ya tiene sus propios `CLAUDE.md`, `AGENTS.md`
+  y carpetas `design/`, `docs/`.
 - **Nota:** el código fuente de la app NO está en este repo (`Claudepctrabajo`).
-  Este repo solo contiene contenido de publicaciones. Falta ubicar/vincular el
-  repo real de la app para poder aplicar los cambios de diseño ahí.
+  Este repo solo contiene contenido de publicaciones. Para aplicar cambios de
+  diseño hay que trabajar directamente en el repo `App-Centro-Rehabilitame`.
 - **Pendiente:** faltan las URLs reales de exportación/descarga de Stitch
   (imágenes y código) para cada pantalla — solo se tienen los IDs internos de
-  Stitch, que no son URLs descargables directamente.
+  Stitch, que no son URLs descargables directamente. Además, `stitch.withgoogle.com`
+  está bloqueado por el proxy de red de este entorno remoto, así que Stitch solo
+  se puede revisar desde el PC principal (login con cuenta Google).
 
 ### Pantallas del proyecto (nombre — ID Stitch)
 
@@ -32,9 +37,10 @@ Centro Rehabilita.me. Guardado aquí para poder retomarlo desde el PC principal.
 
 ### Próximos pasos sugeridos
 
-1. Confirmar cuál es el repo real del código de la app (posiblemente el
-   proyecto de Vercel `app-centro-rehabilitame`) y vincularlo.
+1. ~~Confirmar cuál es el repo real del código de la app~~ — RESUELTO:
+   es `githubfranco8426/App-Centro-Rehabilitame`.
 2. Conseguir las URLs reales de exportación de Stitch para cada pantalla
-   (desde stitch.withgoogle.com) para poder descargar imágenes/código con
-   `curl -L`.
-3. Aplicar los cambios de diseño de usabilidad sobre ese repo real.
+   (desde stitch.withgoogle.com, desde el PC principal) para poder descargar
+   imágenes/código con `curl -L`.
+3. Aplicar los cambios de diseño de usabilidad sobre el repo
+   `App-Centro-Rehabilitame`.
